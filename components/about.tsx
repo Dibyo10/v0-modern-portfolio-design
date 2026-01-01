@@ -54,7 +54,7 @@ export default function About() {
           >
             <h3 className="text-2xl font-bold mb-4">What I Do</h3>
             <p className="text-gray-300 mb-4">
-              I build LLM-powered systems, backend infrastructure, and tools that prioritize correctness over convenience.
+              I build AI-powered systems, backend infrastructure, and tools that prioritize correctness over convenience.
             </p>
             <p className="text-gray-300">
               Currently studying computer science, focused on building reliable AI systems that fail predictably and recover gracefully.

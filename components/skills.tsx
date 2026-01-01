@@ -56,6 +56,7 @@ const skillCategories = [
     capabilities: [
       "MongoDB batching, caching, indexing",
       "Redis + Lua rate limiting",
+      "Go implementation of rate limiting industrial strategies from scratch",
       "GCP (Cloud Run, GCS, Vertex AI)",
       "N+1 elimination & query optimization",
     ],
@@ -95,7 +96,7 @@ export default function Skills() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
           <p className="max-w-2xl mx-auto text-gray-300">
-            What I've built with, not self-assessed percentages.
+            A rough sketch of my inventory till now :)
           </p>
         </motion.div>
 
