@@ -11,6 +11,7 @@ import Contact from "@/components/contact"
 import Footer from "@/components/footer"
 import { CodeAnimation } from "@/components/code-animation"
 import { ParticleBackground } from "@/components/particle-background"
+import { GradientDescentViz } from "@/components/gradient-descent-viz"
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -81,6 +82,7 @@ export default function Home() {
             <Projects />
             <Contact />
             <Footer />
+            <GradientDescentViz />
           </motion.div>
         )}
       </AnimatePresence>
