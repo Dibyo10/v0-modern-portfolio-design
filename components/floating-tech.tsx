@@ -3,14 +3,22 @@
 import { motion } from "framer-motion"
 
 const technologies = [
-  { name: "React", color: "#61DAFB" },
-  { name: "Next.js", color: "#000000" },
-  { name: "TypeScript", color: "#3178C6" },
+  { name: "Go", color: "#00ADD8" },
   { name: "Python", color: "#3776AB" },
-  { name: "FastAPI", color: "#009688" },
-  { name: "Tailwind", color: "#06B6D4" },
-  { name: "OpenAI", color: "#412991" },
-  { name: "Gemini", color: "#8E44AD" },
+  { name: "TypeScript", color: "#3178C6" },
+  { name: "MongoDB", color: "#47A248" },
+  { name: "Redis", color: "#DC382D" },
+  { name: "Pinecone", color: "#000000" },
+  { name: "LangChain", color: "#1C3C3C" },
+  { name: "Anthropic", color: "#D4A574" },
+  { name: "Neural Networks", color: "#FF6F61" },
+  { name: "Agents", color: "#9B59B6" },
+  { name: "Transformers", color: "#FF6F61"},
+  { name: "System Architecture", color:"#D4A574"},
+  { name: "Concurrency", color: "#9B59B6" },
+  { name: "Multithreading", color: "#DC382D" },
+
+  
 ]
 
 export function FloatingTech() {

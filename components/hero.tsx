@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { ArrowDown, Github, Linkedin, Mail, Instagram, FileText } from "lucide-react"
+import { Github, Linkedin, Mail, Instagram, FileText } from "lucide-react"
 
 export default function Hero() {
   const [text, setText] = useState("")
@@ -320,33 +320,6 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 2 }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-        whileHover={{ y: 5 }}
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{
-            duration: 1.5,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "easeInOut",
-          }}
-          className="relative group"
-        >
-          <motion.div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-red-800/30 rounded-full blur-sm opacity-0 group-hover:opacity-100 transition duration-300" />
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" })}
-            className="relative border border-primary/20 backdrop-blur-sm bg-gray-900/50 theme-transition"
-          >
-            <ArrowDown className="h-6 w-6" />
-          </Button>
-        </motion.div>
-      </motion.div>
     </section>
   )
 }
