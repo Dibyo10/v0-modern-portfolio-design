@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState, useRef } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail, Instagram, FileText } from "lucide-react"
 
@@ -11,16 +11,6 @@ export default function Hero() {
   const [index, setIndex] = useState(0)
   const [showCursor, setShowCursor] = useState(true)
   const backgroundRef = useRef<HTMLDivElement>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"],
-  })
-
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.8])
-  const y = useTransform(scrollYProgress, [0, 0.5], [0, 100])
 
   // Typing effect
   useEffect(() => {
@@ -101,7 +91,6 @@ export default function Hero() {
     <section
       id="home"
       className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden theme-transition"
-      ref={containerRef}
     >
       {/* Subtle background animation */}
       <div ref={backgroundRef} className="absolute inset-0 z-0 opacity-70 theme-transition"></div>
@@ -133,7 +122,6 @@ export default function Hero() {
 
       <motion.div
         className="container mx-auto px-4 py-16 flex flex-col md:flex-row items-center relative z-10"
-        style={{ opacity, y, scale }}
       >
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="md:w-1/2 mb-10 md:mb-0">
           <motion.h1
