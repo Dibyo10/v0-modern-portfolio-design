@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "@/components/theme-toggle"
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -43,7 +42,7 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 theme-transition ${
-        scrolled ? "bg-white/90 dark:bg-gray-900/80 backdrop-blur-md shadow-md" : "bg-transparent"
+        scrolled ? "bg-gray-900/90 backdrop-blur-md shadow-md" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -86,7 +85,7 @@ export default function Navbar() {
             >
               <motion.button
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors relative theme-transition"
+                className="text-gray-300 hover:text-primary transition-colors relative theme-transition"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -100,19 +99,11 @@ export default function Navbar() {
               </motion.button>
             </motion.div>
           ))}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: navItems.length * 0.1 + 0.3 }}
-          >
-            <ThemeToggle />
-          </motion.div>
-        </nav>
+                  </nav>
 
         {/* Mobile Navigation Toggle */}
         <div className="flex items-center md:hidden">
-          <ThemeToggle />
-          <Button variant="ghost" size="icon" onClick={toggleMenu} aria-label="Toggle menu" className="ml-2">
+          <Button variant="ghost" size="icon" onClick={toggleMenu} aria-label="Toggle menu">
             <AnimatePresence mode="wait">
               <motion.div
                 key={isOpen ? "close" : "open"}
@@ -136,14 +127,14 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white dark:bg-gray-900 shadow-lg theme-transition"
+            className="md:hidden bg-gray-900 shadow-lg theme-transition"
           >
             <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
               {navItems.map((item, index) => (
                 <motion.button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors py-2 theme-transition"
+                  className="text-gray-300 hover:text-primary transition-colors py-2 theme-transition"
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}

@@ -138,14 +138,14 @@ export default function Hero() {
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="md:w-1/2 mb-10 md:mb-0">
           <motion.h1
             variants={itemVariants}
-            className="text-4xl md:text-6xl font-bold mb-4 text-light-text-primary dark:text-light-text-primary theme-transition"
+            className="text-4xl md:text-6xl font-bold mb-4 text-gray-100 theme-transition"
           >
             Hi, I'm <span className="text-primary">Dibyo Chakraborty</span>
           </motion.h1>
 
           <motion.div
             variants={itemVariants}
-            className="text-2xl md:text-3xl font-semibold mb-6 h-10 text-light-text-primary dark:text-light-text-primary theme-transition backdrop-blur-sm bg-background/30 dark:bg-gray-900/30 p-2 rounded-md inline-block"
+            className="text-2xl md:text-3xl font-semibold mb-6 h-10 text-gray-100 theme-transition backdrop-blur-sm bg-gray-900/30 p-2 rounded-md inline-block"
           >
             {text}
             <span className={showCursor ? "opacity-100" : "opacity-0"}>|</span>
@@ -153,7 +153,7 @@ export default function Hero() {
 
           <motion.p
             variants={itemVariants}
-            className="text-light-text-secondary dark:text-light-text-secondary mb-8 text-lg theme-transition backdrop-blur-sm bg-background/30 dark:bg-gray-900/30 p-4 rounded-md"
+            className="text-gray-300 mb-8 text-lg theme-transition backdrop-blur-sm bg-gray-900/30 p-4 rounded-md"
           >
             Building LLM systems where correctness, cost control, and failure modes are treated as first-class citizens — not afterthoughts.
           </motion.p>
@@ -173,18 +173,18 @@ export default function Hero() {
               />
               <Button
                 onClick={() => window.open("https://www.instagram.com/dibyo._.chakraborty/", "_blank")}
-                className="relative bg-background dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="relative bg-gray-900 hover:bg-gray-800"
               >
                 <span className="relative z-10 text-primary">Contact Me</span>
               </Button>
             </motion.div>
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="relative group">
-              <motion.div className="absolute -inset-0.5 bg-gradient-to-r from-gray-600 to-gray-400 dark:from-gray-400 dark:to-gray-600 rounded-lg blur opacity-30 group-hover:opacity-70 transition duration-300" />
+              <motion.div className="absolute -inset-0.5 bg-gradient-to-r from-gray-400 to-gray-600 rounded-lg blur opacity-30 group-hover:opacity-70 transition duration-300" />
               <Button
                 variant="outline"
                 onClick={() => document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" })}
-                className="relative bg-background dark:bg-gray-900 border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="relative bg-gray-900 border-gray-700 hover:bg-gray-800"
               >
                 <span className="relative z-10">View Projects</span>
               </Button>
@@ -195,7 +195,7 @@ export default function Hero() {
               <Button
                 variant="outline"
                 onClick={() => window.open("https://drive.google.com/file/d/1miDmjV6DuwGqPEb-J0bT3d57-oyc_dRl/view?usp=sharing", "_blank")}
-                className="relative bg-background dark:bg-gray-900 border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="relative bg-gray-900 border-gray-700 hover:bg-gray-800"
               >
                 <FileText className="h-4 w-4 mr-2" />
                 <span className="relative z-10">Resume</span>
@@ -228,7 +228,7 @@ export default function Hero() {
                   variant="ghost"
                   size="icon"
                   aria-label={Icon.name}
-                  className="relative theme-transition bg-background/50 dark:bg-gray-900/50 backdrop-blur-sm"
+                  className="relative theme-transition bg-gray-900/50 backdrop-blur-sm"
                   onClick={() => window.open(url, "_blank")}
                 >
                   <Icon className="h-5 w-5" />
@@ -274,7 +274,7 @@ export default function Hero() {
 
             {/* Image container with glass effect */}
             <motion.div
-              className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden relative z-10 border-4 border-white dark:border-gray-800 theme-transition shadow-xl"
+              className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden relative z-10 border-4 border-gray-800 theme-transition shadow-xl"
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3 }}
             >
@@ -341,7 +341,7 @@ export default function Hero() {
             variant="ghost"
             size="icon"
             onClick={() => document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" })}
-            className="relative border border-primary/20 backdrop-blur-sm bg-background/50 dark:bg-gray-900/50 theme-transition"
+            className="relative border border-primary/20 backdrop-blur-sm bg-gray-900/50 theme-transition"
           >
             <ArrowDown className="h-6 w-6" />
           </Button>

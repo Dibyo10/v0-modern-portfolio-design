@@ -65,7 +65,7 @@ export default function Projects() {
   }
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800/50">
+    <section id="projects" className="py-20 bg-gray-800/50">
       <div className="container mx-auto px-4" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ export default function Projects() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
-          <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+          <p className="max-w-2xl mx-auto text-gray-300">
             Projects that demonstrate systems thinking, engineering depth, and production-grade implementation.
           </p>
         </motion.div>
@@ -136,20 +136,20 @@ export default function Projects() {
                 </div>
 
                 <CardHeader>
-                  <CardTitle className="text-xl font-bold text-gray-800 dark:text-gray-100 group-hover:text-primary transition-colors">
+                  <CardTitle className="text-xl font-bold text-gray-100 group-hover:text-primary transition-colors">
                     {project.title}
                   </CardTitle>
-                  <CardDescription className="text-gray-600 dark:text-gray-300">{project.description}</CardDescription>
+                  <CardDescription className="text-gray-300">{project.description}</CardDescription>
                 </CardHeader>
 
                 <CardContent className="flex-grow">
                   {/* Engineering Challenges */}
                   {project.challenges && (
                     <div className="mb-4">
-                      <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Key Challenges</p>
+                      <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Key Challenges</p>
                       <ul className="space-y-1">
                         {project.challenges.map((challenge, idx) => (
-                          <li key={idx} className="text-sm text-gray-600 dark:text-gray-300 flex items-start">
+                          <li key={idx} className="text-sm text-gray-300 flex items-start">
                             <span className="text-primary mr-2">•</span>
                             {challenge}
                           </li>
@@ -162,7 +162,7 @@ export default function Projects() {
                       <Badge
                         key={tag}
                         variant="outline"
-                        className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 border-gray-300 dark:border-gray-700 hover:bg-primary/10 hover:text-primary hover:border-primary transition-colors"
+                        className="bg-gray-800 text-gray-200 border-gray-700 hover:bg-primary/10 hover:text-primary hover:border-primary transition-colors"
                       >
                         {tag}
                       </Badge>
@@ -176,7 +176,7 @@ export default function Projects() {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="border-gray-300 dark:border-gray-700 hover:border-primary hover:bg-primary/10 transition-colors"
+                        className="border-gray-700 hover:border-primary hover:bg-primary/10 transition-colors"
                         asChild={project.github !== "#"}
                         disabled={project.github === "#"}
                       >

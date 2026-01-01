@@ -8,49 +8,56 @@ const skillCategories = [
   {
     name: "Go",
     capabilities: [
-      "Concurrency-safe HTTP servers",
+      "Concurrency-safe HTTP servers (Gin)",
       "Rate limiters from scratch",
       "Mutexes, RWLocks, worker patterns",
+      "Algorithmic correctness & invariants",
     ],
   },
   {
     name: "Python",
     capabilities: [
       "FastAPI backend services",
-      "ML pipelines & model inference",
-      "Data processing & validation",
+      "LangChain & LangGraph orchestration",
+      "ML inference pipelines (batching, latency, error handling)",
+      "RoBERTa sentiment analysis",
     ],
   },
   {
     name: "TypeScript",
     capabilities: [
-      "Production LLM system backends",
+      "Production LLM backends (Express, Hono)",
       "Type-safe API clients",
       "Streaming response handlers",
+      "Webhook integrations",
     ],
   },
   {
     name: "ML & Deep Learning",
     capabilities: [
-      "Neural networks (ANN, CNN, RNN/LSTM)",
-      "Optimization (SGD, Adam, BPTT, gradient flow)",
-      "Dimensionality reduction (PCA, t-SNE, UMAP)",
+      "Neural network fundamentals (ANNs, backprop, gradient flow)",
+      "Sequence models (RNNs, BPTT, vanishing gradients)",
+      "Optimization dynamics (SGD, momentum, Adam)",
+      "Representation learning (embeddings, cosine similarity)",
+      "Practical NLP models (RoBERTa inference, weak supervision)",
     ],
   },
   {
     name: "LLM Engineering",
     capabilities: [
-      "Multi-provider tool calling (Anthropic, OpenAI)",
-      "RAG pipelines with reranking",
-      "Prompt caching for 70%+ cache hits",
+      "Multi-provider tool calling",
+      "RAG with Vector DBs (Pinecone, Qdrant, FAISS)",
+      "Agent control flow & failure analysis",
+      "Prompt caching & MCP integration",
     ],
   },
   {
     name: "Backend & Data",
     capabilities: [
-      "Rate limiting with Redis + Lua scripts",
-      "MongoDB optimization & batch patterns",
-      "Pinecone vector store integration",
+      "MongoDB batching, caching, indexing",
+      "Redis + Lua rate limiting",
+      "GCP (Cloud Run, GCS, Vertex AI)",
+      "N+1 elimination & query optimization",
     ],
   },
 ]
@@ -87,7 +94,7 @@ export default function Skills() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
-          <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+          <p className="max-w-2xl mx-auto text-gray-300">
             What I've built with, not self-assessed percentages.
           </p>
         </motion.div>
@@ -106,12 +113,12 @@ export default function Skills() {
                   variants={itemVariants}
                   transition={{ duration: 0.5 }}
                   whileHover={{ scale: 1.02 }}
-                  className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 hover:shadow-xl transition-all duration-300"
+                  className="bg-gray-900 rounded-lg shadow-md p-6 hover:shadow-xl transition-all duration-300"
                 >
                   <h3 className="font-bold text-lg text-primary mb-3">{skill.name}</h3>
                   <ul className="space-y-2">
                     {skill.capabilities.map((capability, idx) => (
-                      <li key={idx} className="text-gray-600 dark:text-gray-300 text-sm flex items-start">
+                      <li key={idx} className="text-gray-300 text-sm flex items-start">
                         <span className="text-primary mr-2 mt-1">›</span>
                         {capability}
                       </li>

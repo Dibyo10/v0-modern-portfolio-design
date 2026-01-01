@@ -18,7 +18,7 @@ export default function About() {
   }
 
   return (
-    <section id="about" className="py-20 bg-accent/50 dark:bg-gray-800/50 theme-transition relative">
+    <section id="about" className="py-20 bg-gray-800/50 theme-transition relative">
       {/* Floating tech tags in background */}
       <FloatingTech />
 
@@ -32,7 +32,7 @@ export default function About() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
-          <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+          <p className="max-w-2xl mx-auto text-gray-300">
             Systems-first AI & backend engineer who builds production-grade LLM-powered systems by reasoning from first principles and shipping working software.
           </p>
         </motion.div>
@@ -53,11 +53,11 @@ export default function About() {
             className="flex flex-col justify-center"
           >
             <h3 className="text-2xl font-bold mb-4">What I Do</h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
+            <p className="text-gray-300 mb-4">
               I build LLM-powered systems, backend infrastructure, and tools that prioritize correctness over convenience.
             </p>
-            <p className="text-gray-600 dark:text-gray-300">
-              CS undergrad. Long-term goal: reliable AI systems at scale — systems that fail predictably and recover gracefully.
+            <p className="text-gray-300">
+              Currently studying computer science, focused on building reliable AI systems that fail predictably and recover gracefully.
             </p>
           </motion.div>
         </div>
@@ -68,7 +68,7 @@ export default function About() {
             animate={inView ? "visible" : "hidden"}
             variants={variants}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow theme-transition"
+            className="bg-gray-900 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow theme-transition"
           >
             <div className="flex items-center mb-4">
               <div className="bg-primary/10 p-3 rounded-full mr-4">
@@ -76,7 +76,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-semibold">Technical Skills</h3>
             </div>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-gray-300">
               Go, Python, TypeScript for backend systems. ML/DL fundamentals (neural nets, optimization, gradient flow). LLM engineering: tool calling, RAG, prompt caching. Redis, MongoDB, Pinecone.
             </p>
           </motion.div>
@@ -86,7 +86,7 @@ export default function About() {
             animate={inView ? "visible" : "hidden"}
             variants={variants}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow theme-transition"
+            className="bg-gray-900 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow theme-transition"
           >
             <div className="flex items-center mb-4">
               <div className="bg-primary/10 p-3 rounded-full mr-4">
@@ -94,10 +94,10 @@ export default function About() {
               </div>
               <h3 className="text-xl font-semibold">Engineering Philosophy</h3>
             </div>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-gray-300">
               Design before code. AI as an assistant, never the decision-maker. Build tools that fail loudly.
             </p>
-            <p className="text-gray-500 dark:text-gray-400 text-sm mt-2 italic">
+            <p className="text-gray-400 text-sm mt-2 italic">
               Example: All LLM-generated outputs are validated against schema constraints before execution.
             </p>
           </motion.div>
@@ -107,7 +107,7 @@ export default function About() {
             animate={inView ? "visible" : "hidden"}
             variants={variants}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow theme-transition"
+            className="bg-gray-900 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow theme-transition"
           >
             <div className="flex items-center mb-4">
               <div className="bg-primary/10 p-3 rounded-full mr-4">
@@ -115,7 +115,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-semibold">Current Focus</h3>
             </div>
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-gray-300">
               Building production LLM systems with agentic workflows, schema validation, and self-healing execution loops. Backend infrastructure in Go with concurrency-safe patterns.
             </p>
           </motion.div>

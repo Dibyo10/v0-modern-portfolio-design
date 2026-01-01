@@ -111,7 +111,7 @@ export default function Contact() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
-          <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
+          <p className="max-w-2xl mx-auto text-gray-300">
             Have a project in mind or want to collaborate? Feel free to reach out to me.
           </p>
         </motion.div>
@@ -128,14 +128,14 @@ export default function Contact() {
                 href="https://github.com/Dibyo10"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-all group"
+                className="flex items-center p-4 bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-all group"
               >
                 <div className="bg-primary/10 p-3 rounded-full mr-4 group-hover:bg-primary/20 transition-colors">
                   <Github className="h-6 w-6 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-semibold text-gray-800 dark:text-gray-100">GitHub</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">See my code and contributions</p>
+                  <h4 className="font-semibold text-gray-100">GitHub</h4>
+                  <p className="text-sm text-gray-300">See my code and contributions</p>
                 </div>
                 <span className="text-primary text-sm font-medium">→</span>
               </a>
@@ -144,34 +144,34 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/dibyo-chakraborty-2a7309317/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-all group"
+                className="flex items-center p-4 bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-all group"
               >
                 <div className="bg-primary/10 p-3 rounded-full mr-4 group-hover:bg-primary/20 transition-colors">
                   <Linkedin className="h-6 w-6 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-semibold text-gray-800 dark:text-gray-100">LinkedIn</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Connect professionally</p>
+                  <h4 className="font-semibold text-gray-100">LinkedIn</h4>
+                  <p className="text-sm text-gray-300">Connect professionally</p>
                 </div>
                 <span className="text-primary text-sm font-medium">→</span>
               </a>
 
               <a
                 href="mailto:dibyo.dc@gmail.com"
-                className="flex items-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-all group"
+                className="flex items-center p-4 bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-all group"
               >
                 <div className="bg-primary/10 p-3 rounded-full mr-4 group-hover:bg-primary/20 transition-colors">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-semibold text-gray-800 dark:text-gray-100">Email</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">dibyo.dc@gmail.com</p>
+                  <h4 className="font-semibold text-gray-100">Email</h4>
+                  <p className="text-sm text-gray-300">dibyo.dc@gmail.com</p>
                 </div>
                 <span className="text-primary text-sm font-medium">→</span>
               </a>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+            <motion.div variants={itemVariants} className="flex items-center text-sm text-gray-400">
               <MapPin className="h-4 w-4 mr-2" />
               Bengaluru, India
             </motion.div>
@@ -181,7 +181,7 @@ export default function Contact() {
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8"
+            className="bg-gray-900 rounded-lg shadow-lg p-8"
           >
             {!showOptions ? (
               <>
@@ -267,7 +267,7 @@ export default function Contact() {
             ) : (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                 <h3 className="text-2xl font-semibold mb-6">Choose How to Send</h3>
-                <p className="mb-6 text-gray-600 dark:text-gray-300">
+                <p className="mb-6 text-gray-300">
                   Your message is ready! Choose your preferred platform to send it:
                 </p>
 
