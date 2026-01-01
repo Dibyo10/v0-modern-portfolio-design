@@ -76,7 +76,7 @@ export default function Projects() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
           <p className="max-w-2xl mx-auto text-gray-300">
-            Projects that demonstrate systems thinking, engineering depth, and production-grade implementation.
+            Projects made in pursuit to demonstrate systems thinking, engineering depth, and production-grade implementation.
           </p>
         </motion.div>
 
