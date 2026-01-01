@@ -2,7 +2,7 @@
 
 import { useInView } from "react-intersection-observer"
 import { motion } from "framer-motion"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink, Github, FolderGit2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -31,26 +31,15 @@ const projects = [
     inProgress: false,
   },
   {
-    title: "Autonomous API Feature Integrator",
+    title: "LLM Quality Monitoring System",
     description:
-      "Agentic system with LangGraph-style orchestration, schema extraction, self-healing execution loops, and test-driven regeneration.",
+      "Internal monitoring pipeline analyzing thousands of messages for negative sentiment, calculation errors, tool misuse, and user frustration. RoBERTa sentiment + embedding-based clustering for actionable failure categorization.",
     image: "/placeholder.svg",
-    tags: ["Go", "Python", "LLM", "Agents"],
-    challenges: ["Schema validation at runtime", "Failure recovery loops", "Test-driven regeneration"],
-    github: "#",
-    demo: "#",
-    inProgress: true,
-  },
-  {
-    title: "Recommender System Experiments",
-    description:
-      "ML experiments with Bayesian ranking, time decay, momentum-based trends.",
-    image: "/placeholder.svg",
-    tags: ["Python", "ML", "Algorithms", "Data"],
-    challenges: ["Cold start handling", "Temporal decay modeling", "Ranking calibration"],
-    github: "#",
-    demo: "#",
-    inProgress: true,
+    tags: ["Python", "RoBERTa", "MongoDB", "Flask", "Embeddings"],
+    challenges: ["Cached inference for low-latency sentiment at scale", "Centroid + exemplar similarity clustering", "N+1 query elimination with batch/index optimization"],
+    github: null,
+    demo: null,
+    inProgress: false,
   },
 ]
 
@@ -232,6 +221,27 @@ export default function Projects() {
               </Card>
             </motion.div>
           ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="text-center mt-12"
+        >
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary hover:text-white transition-colors"
+              asChild
+            >
+              <a href="https://github.com/Dibyo10?tab=repositories" target="_blank" rel="noopener noreferrer">
+                <FolderGit2 className="h-5 w-5 mr-2" />
+                See All My Repos
+              </a>
+            </Button>
+          </motion.div>
         </motion.div>
       </div>
     </section>

@@ -77,7 +77,7 @@ export default function About() {
               <h3 className="text-xl font-semibold">Technical Skills</h3>
             </div>
             <p className="text-gray-600 dark:text-gray-300">
-              Go, Python, TypeScript for backend systems. LLM engineering including multi-provider tool calling, RAG with reranking, prompt caching, and conversation summarization. Redis, MongoDB, Pinecone.
+              Go, Python, TypeScript for backend systems. ML/DL fundamentals (neural nets, optimization, gradient flow). LLM engineering: tool calling, RAG, prompt caching. Redis, MongoDB, Pinecone.
             </p>
           </motion.div>
 

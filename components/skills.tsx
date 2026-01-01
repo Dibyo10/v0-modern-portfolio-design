@@ -17,7 +17,7 @@ const skillCategories = [
     name: "Python",
     capabilities: [
       "FastAPI backend services",
-      "Agentic workflow orchestration",
+      "ML pipelines & model inference",
       "Data processing & validation",
     ],
   },
@@ -30,6 +30,14 @@ const skillCategories = [
     ],
   },
   {
+    name: "ML & Deep Learning",
+    capabilities: [
+      "Neural networks (ANN, CNN, RNN/LSTM)",
+      "Optimization (SGD, Adam, BPTT, gradient flow)",
+      "Dimensionality reduction (PCA, t-SNE, UMAP)",
+    ],
+  },
+  {
     name: "LLM Engineering",
     capabilities: [
       "Multi-provider tool calling (Anthropic, OpenAI)",
@@ -38,18 +46,10 @@ const skillCategories = [
     ],
   },
   {
-    name: "Backend Systems",
+    name: "Backend & Data",
     capabilities: [
-      "Sliding window rate limiting with Lua",
-      "Async job queues & summarization",
-      "Multi-stage orchestration pipelines",
-    ],
-  },
-  {
-    name: "Databases",
-    capabilities: [
-      "Redis caching with Lua scripts",
-      "MongoDB with repository patterns",
+      "Rate limiting with Redis + Lua scripts",
+      "MongoDB optimization & batch patterns",
       "Pinecone vector store integration",
     ],
   },
