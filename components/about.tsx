@@ -97,9 +97,7 @@ export default function About() {
             <p className="text-gray-300">
               Design before code. AI as an assistant, never the decision-maker. Build tools that fail loudly.
             </p>
-            <p className="text-gray-400 text-sm mt-2 italic">
-              Example: All LLM-generated outputs are validated against schema constraints before execution.
-            </p>
+            
           </motion.div>
 
           <motion.div

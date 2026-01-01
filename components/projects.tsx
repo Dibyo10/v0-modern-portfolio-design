@@ -12,7 +12,7 @@ const projects = [
     title: "HandaUncle",
     description:
       "Production personal finance chatbot with multi-provider LLM orchestration, tool calling (calculators, charts, web search), RAG with reranking, and conversation summarization. Built from scratch during internship.",
-    image: "/placeholder.svg",
+    image: "/images/handauncle_logo.jpeg",
     tags: ["TypeScript", "Anthropic", "OpenAI", "Redis", "Pinecone", "MongoDB"],
     challenges: ["Multi-provider tool calling orchestration", "Prompt caching for 70%+ cache hits", "Sliding window rate limiting with Lua", "Async conversation summarization"],
     github: null,
@@ -33,7 +33,7 @@ const projects = [
   {
     title: "LLM Quality Monitoring System",
     description:
-      "Internal monitoring pipeline analyzing thousands of messages for negative sentiment, calculation errors, tool misuse, and user frustration. RoBERTa sentiment + embedding-based clustering for actionable failure categorization.",
+      "Internal monitoring pipeline analyzing 10k+ messages for negative sentiment, calculation errors, tool misuse, and user frustration. RoBERTa sentiment + embedding-based clustering for actionable failure categorization.",
     image: "/placeholder.svg",
     tags: ["Python", "RoBERTa", "MongoDB", "Flask", "Embeddings"],
     challenges: ["Cached inference for low-latency sentiment at scale", "Centroid + exemplar similarity clustering", "N+1 query elimination with batch/index optimization"],
