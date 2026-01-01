@@ -155,7 +155,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-gray-300 mb-8 text-lg theme-transition backdrop-blur-sm bg-gray-900/30 p-4 rounded-md"
           >
-            Building LLM systems where correctness, cost control, and failure modes are treated as first-class citizens — not afterthoughts.
+            Building AI systems where correctness, cost control, and failure modes are treated as first-class citizens, not afterthoughts.
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-8">
@@ -244,7 +244,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="md:w-1/2 flex justify-center"
         >
-          <motion.div className="relative w-64 h-64 md:w-80 md:h-80" animate={floatingAnimation}>
+          <motion.div className="relative w-64 h-64 md:w-80 md:h-80">
             <motion.div
               className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-red-800 opacity-20 blur-xl"
               animate={{
@@ -278,7 +278,7 @@ export default function Hero() {
               whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3 }}
             >
-              <img src="/images/dibyo-profile.png" alt="Dibyo Chakraborty" className="w-full h-full object-cover" />
+              <img src="/images/dibyo-profile.png" alt="Dibyo Chakraborty" className="w-full h-full object-cover object-top" />
 
               {/* Overlay with glass effect */}
               <motion.div
