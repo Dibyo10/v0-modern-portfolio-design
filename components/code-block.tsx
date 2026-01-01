@@ -3,26 +3,37 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 
-const codeSnippet = `function Portfolio() {
-  const [isLoading, setIsLoading] = useState(true);
-  const skills = ['React', 'Next.js', 'FastAPI', 'Python'];
-  
-  useEffect(() => {
-    // Initialize portfolio
-    fetchProjects()
-      .then(data => setProjects(data))
-      .finally(() => setIsLoading(false));
-  }, []);
-  
-  return (
-    <main className="portfolio">
-      <Header />
-      <Projects data={projects} />
-      <Skills list={skills} />
-      <Contact />
-    </main>
-  );
-}`
+const codeSnippet = `const engineer = {
+  name: "Dibyo Chakraborty",
+  role: "AI & Backend Engineer",
+
+  principles: [
+    "first_principles",
+    "design_before_code",
+    "fail_loudly"
+  ],
+
+  builds: {
+    llmSystems: [
+      "tool_calling",
+      "schema_validation",
+      "rag_with_reranking",
+      "memory_compression"
+    ],
+    backend: [
+      "concurrency_safe_services",
+      "rate_limiters_from_scratch",
+      "observability_first"
+    ],
+  },
+
+  philosophy: (system) => {
+    if (!system.isCorrect()) {
+      throw new ReliabilityError();
+    }
+    return system.ship();
+  }
+};`
 
 export function CodeBlock() {
   const [visibleCode, setVisibleCode] = useState("")
@@ -76,8 +87,8 @@ export function CodeBlock() {
           <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
           <div className="w-3 h-3 rounded-full bg-green-500"></div>
         </div>
-        <div className="text-xs text-gray-400">portfolio.jsx</div>
-        <div className="text-xs text-gray-400">JavaScript</div>
+        <div className="text-xs text-gray-400">engineer.ts</div>
+        <div className="text-xs text-gray-400">TypeScript</div>
       </div>
       <div className="p-4 font-mono text-sm text-gray-300 overflow-x-auto">
         <pre className="whitespace-pre-wrap relative">
