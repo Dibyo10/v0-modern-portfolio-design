@@ -48,13 +48,13 @@ export function CodeAnimation() {
 
   // Generate initial symbols
   useEffect(() => {
-    symbols.current = Array.from({ length: 25 }, (_, i) => ({
+    symbols.current = Array.from({ length: 12 }, (_, i) => ({
       id: i,
       symbol: codeSymbols[Math.floor(Math.random() * codeSymbols.length)],
       x: Math.random() * window.innerWidth,
       y: Math.random() * window.innerHeight,
-      size: Math.random() * 14 + 10,
-      opacity: Math.random() * 0.5 + 0.1,
+      size: Math.random() * 12 + 8,
+      opacity: Math.random() * 0.2 + 0.05,
       rotation: Math.random() * 360,
     }))
   }, [])

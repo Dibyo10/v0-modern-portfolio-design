@@ -9,31 +9,48 @@ import { Badge } from "@/components/ui/badge"
 
 const projects = [
   {
-    title: "Moodify",
+    title: "HandaUncle",
     description:
-      "A sentiment analysis application that analyzes text to determine emotional tone. Currently building the backend infrastructure with FastAPI, databases, and OpenAI integration.",
-    image: "/images/moodify-project.jpeg",
-    tags: ["FastAPI", "Python", "OpenAI", "Databases"],
-    github: "https://github.com/Dibyo10/Moodify",
-    demo: "https://github.com/Dibyo10/Moodify",
+      "Production personal finance chatbot with multi-provider LLM orchestration, tool calling (calculators, charts, web search), RAG with reranking, and conversation summarization. Built from scratch during internship.",
+    image: "/placeholder.svg",
+    tags: ["TypeScript", "Anthropic", "OpenAI", "Redis", "Pinecone", "MongoDB"],
+    challenges: ["Multi-provider tool calling orchestration", "Prompt caching for 70%+ cache hits", "Sliding window rate limiting with Lua", "Async conversation summarization"],
+    github: null,
+    demo: "https://chat.handauncle.com",
+    inProgress: false,
+  },
+  {
+    title: "Rate Limiting from Scratch",
+    description:
+      "Token Bucket, Sliding Window, and Leaky Bucket algorithms implemented in Go. Part of my System Design learning series on LinkedIn.",
+    image: "/placeholder.svg",
+    tags: ["Go", "Concurrency", "Algorithms", "Backend"],
+    challenges: ["Concurrency correctness", "Lazy time computation", "Algorithmic invariants"],
+    github: "https://github.com/Dibyo10/System_Design_Learnings/tree/main/Rate_Limiting",
+    demo: null,
+    inProgress: false,
+  },
+  {
+    title: "Autonomous API Feature Integrator",
+    description:
+      "Agentic system with LangGraph-style orchestration, schema extraction, self-healing execution loops, and test-driven regeneration.",
+    image: "/placeholder.svg",
+    tags: ["Go", "Python", "LLM", "Agents"],
+    challenges: ["Schema validation at runtime", "Failure recovery loops", "Test-driven regeneration"],
+    github: "#",
+    demo: "#",
     inProgress: true,
   },
   {
-    title: "Portfolio Website",
-    description: "A modern portfolio website built with Next.js and Tailwind CSS to showcase my projects and skills.",
-    image: "/images/portfolio-project.jpeg",
-    tags: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/",
-    demo: "https://github.com/", // This will be updated to the portfolio link
-  },
-  {
-    title: "Interactive Dictionary",
+    title: "Recommender System Experiments",
     description:
-      "A feature-rich dictionary application with word definitions, pronunciations, and an AI-powered chatbot using Gemini API for language assistance.",
-    image: "/images/dictionary-project.jpeg",
-    tags: ["HTML/CSS", "JavaScript", "Bootstrap", "Dictionary API", "Gemini AI"],
-    github: "https://github.com/Dibyo10/DictionaryApp",
-    demo: "https://aidictionarypeng.netlify.app/",
+      "ML experiments with Bayesian ranking, time decay, momentum-based trends.",
+    image: "/placeholder.svg",
+    tags: ["Python", "ML", "Algorithms", "Data"],
+    challenges: ["Cold start handling", "Temporal decay modeling", "Ranking calibration"],
+    github: "#",
+    demo: "#",
+    inProgress: true,
   },
 ]
 
@@ -70,8 +87,7 @@ export default function Projects() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
           <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
-            Here are some of the projects I've worked on. My current focus is on Moodify, a sentiment analysis
-            application.
+            Projects that demonstrate systems thinking, engineering depth, and production-grade implementation.
           </p>
         </motion.div>
 
@@ -138,7 +154,21 @@ export default function Projects() {
                 </CardHeader>
 
                 <CardContent className="flex-grow">
-                  <div className="flex flex-wrap gap-2 mt-2">
+                  {/* Engineering Challenges */}
+                  {project.challenges && (
+                    <div className="mb-4">
+                      <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Key Challenges</p>
+                      <ul className="space-y-1">
+                        {project.challenges.map((challenge, idx) => (
+                          <li key={idx} className="text-sm text-gray-600 dark:text-gray-300 flex items-start">
+                            <span className="text-primary mr-2">•</span>
+                            {challenge}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <Badge
                         key={tag}
@@ -151,33 +181,53 @@ export default function Projects() {
                   </div>
                 </CardContent>
 
-                <CardFooter className="flex justify-between">
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-gray-300 dark:border-gray-700 hover:border-primary hover:bg-primary/10 transition-colors"
-                      asChild
-                    >
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
-                      </a>
-                    </Button>
-                  </motion.div>
-
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button size="sm" className="bg-primary hover:bg-red-800 transition-colors" asChild>
-                      <a
-                        href={project.title === "Portfolio Website" ? window.location.origin : project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                <CardFooter className="flex justify-start gap-3">
+                  {project.github && (
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="border-gray-300 dark:border-gray-700 hover:border-primary hover:bg-primary/10 transition-colors"
+                        asChild={project.github !== "#"}
+                        disabled={project.github === "#"}
                       >
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Demo
-                      </a>
-                    </Button>
-                  </motion.div>
+                        {project.github === "#" ? (
+                          <span className="flex items-center text-gray-400">
+                            <Github className="h-4 w-4 mr-2" />
+                            Code
+                          </span>
+                        ) : (
+                          <a href={project.github} target="_blank" rel="noopener noreferrer">
+                            <Github className="h-4 w-4 mr-2" />
+                            Code
+                          </a>
+                        )}
+                      </Button>
+                    </motion.div>
+                  )}
+
+                  {project.demo && (
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                      <Button
+                        size="sm"
+                        className="bg-primary hover:bg-red-800 transition-colors"
+                        asChild={project.demo !== "#"}
+                        disabled={project.demo === "#"}
+                      >
+                        {project.demo === "#" ? (
+                          <span className="flex items-center">
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            Demo
+                          </span>
+                        ) : (
+                          <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="h-4 w-4 mr-2" />
+                            See it Live
+                          </a>
+                        )}
+                      </Button>
+                    </motion.div>
+                  )}
                 </CardFooter>
               </Card>
             </motion.div>

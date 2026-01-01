@@ -3,11 +3,11 @@
 import { useEffect, useState, useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { ArrowDown, Github, Linkedin, Mail, Instagram } from "lucide-react"
+import { ArrowDown, Github, Linkedin, Mail, Instagram, FileText } from "lucide-react"
 
 export default function Hero() {
   const [text, setText] = useState("")
-  const fullText = "Full Stack Developer"
+  const fullText = "AI & Backend Engineer"
   const [index, setIndex] = useState(0)
   const [showCursor, setShowCursor] = useState(true)
   const backgroundRef = useRef<HTMLDivElement>(null)
@@ -155,8 +155,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-light-text-secondary dark:text-light-text-secondary mb-8 text-lg theme-transition backdrop-blur-sm bg-background/30 dark:bg-gray-900/30 p-4 rounded-md"
           >
-            I'm a 19-year-old developer building modern web applications with a focus on AI integration. Currently
-            developing the backend for Moodify and exploring AI tools like OpenAI and Gemini.
+            Building LLM systems where correctness, cost control, and failure modes are treated as first-class citizens — not afterthoughts.
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-8">
@@ -190,11 +189,23 @@ export default function Hero() {
                 <span className="relative z-10">View Projects</span>
               </Button>
             </motion.div>
+
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="relative group">
+              <motion.div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 to-red-800/50 rounded-lg blur opacity-30 group-hover:opacity-70 transition duration-300" />
+              <Button
+                variant="outline"
+                onClick={() => window.open("https://drive.google.com/file/d/1miDmjV6DuwGqPEb-J0bT3d57-oyc_dRl/view?usp=sharing", "_blank")}
+                className="relative bg-background dark:bg-gray-900 border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+              >
+                <FileText className="h-4 w-4 mr-2" />
+                <span className="relative z-10">Resume</span>
+              </Button>
+            </motion.div>
           </motion.div>
 
           <div className="flex space-x-4">
             {[
-              { Icon: Github, url: "https://github.com/" },
+              { Icon: Github, url: "https://github.com/Dibyo10" },
               { Icon: Linkedin, url: "https://www.linkedin.com/in/dibyo-chakraborty-2a7309317/" },
               { Icon: Instagram, url: "https://www.instagram.com/dibyo._.chakraborty/" },
               { Icon: Mail, url: "mailto:dibyo.dc@gmail.com" },

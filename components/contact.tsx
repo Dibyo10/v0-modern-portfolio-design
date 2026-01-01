@@ -119,57 +119,61 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <motion.div variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"}>
             <motion.h3 variants={itemVariants} className="text-2xl font-semibold mb-6">
-              Contact Information
+              Best Ways to Reach Me
             </motion.h3>
 
-            <motion.div variants={itemVariants} className="flex items-start mb-6">
-              <div className="bg-primary/10 p-3 rounded-full mr-4">
-                <Mail className="h-6 w-6 text-primary" />
-              </div>
-              <div>
-                <h4 className="font-medium mb-1">Email</h4>
-                <p className="text-gray-600 dark:text-gray-300">dibyo.dc@gmail.com</p>
-              </div>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="flex items-start mb-6">
-              <div className="bg-primary/10 p-3 rounded-full mr-4">
-                <MapPin className="h-6 w-6 text-primary" />
-              </div>
-              <div>
-                <h4 className="font-medium mb-1">Location</h4>
-                <p className="text-gray-600 dark:text-gray-300">Bengaluru, India</p>
-              </div>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="mt-10">
-              <h3 className="text-2xl font-semibold mb-6">Follow Me</h3>
-              <div className="flex space-x-4">
-                <a
-                  href="https://github.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors"
-                >
+            {/* Primary Contact Methods - GitHub & LinkedIn */}
+            <motion.div variants={itemVariants} className="space-y-4 mb-8">
+              <a
+                href="https://github.com/Dibyo10"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-all group"
+              >
+                <div className="bg-primary/10 p-3 rounded-full mr-4 group-hover:bg-primary/20 transition-colors">
                   <Github className="h-6 w-6 text-primary" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/dibyo-chakraborty-2a7309317/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors"
-                >
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-semibold text-gray-800 dark:text-gray-100">GitHub</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">See my code and contributions</p>
+                </div>
+                <span className="text-primary text-sm font-medium">→</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/dibyo-chakraborty-2a7309317/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-all group"
+              >
+                <div className="bg-primary/10 p-3 rounded-full mr-4 group-hover:bg-primary/20 transition-colors">
                   <Linkedin className="h-6 w-6 text-primary" />
-                </a>
-                <a
-                  href="https://www.instagram.com/dibyo._.chakraborty/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-colors"
-                >
-                  <Instagram className="h-6 w-6 text-primary" />
-                </a>
-              </div>
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-semibold text-gray-800 dark:text-gray-100">LinkedIn</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">Connect professionally</p>
+                </div>
+                <span className="text-primary text-sm font-medium">→</span>
+              </a>
+
+              <a
+                href="mailto:dibyo.dc@gmail.com"
+                className="flex items-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-md hover:shadow-lg transition-all group"
+              >
+                <div className="bg-primary/10 p-3 rounded-full mr-4 group-hover:bg-primary/20 transition-colors">
+                  <Mail className="h-6 w-6 text-primary" />
+                </div>
+                <div className="flex-1">
+                  <h4 className="font-semibold text-gray-800 dark:text-gray-100">Email</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">dibyo.dc@gmail.com</p>
+                </div>
+                <span className="text-primary text-sm font-medium">→</span>
+              </a>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+              <MapPin className="h-4 w-4 mr-2" />
+              Bengaluru, India
             </motion.div>
           </motion.div>
 

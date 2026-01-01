@@ -23,7 +23,7 @@ export default function Footer() {
             className="mb-6 md:mb-0"
           >
             <h3 className="text-2xl font-bold text-primary mb-2">Dibyo Chakraborty</h3>
-            <p className="text-gray-400">Full Stack Developer</p>
+            <p className="text-gray-400">AI & Backend Engineer</p>
           </motion.div>
 
           <motion.div

@@ -34,8 +34,8 @@ export function ParticleBackground() {
 
     // Create particles
     const particles: Particle[] = []
-    const particleCount = Math.min(window.innerWidth / 15, 100) // Responsive particle count
-    const connectionDistance = 150 // Maximum distance for connecting particles
+    const particleCount = Math.min(window.innerWidth / 30, 50) // Reduced by 50%
+    const connectionDistance = 100 // Reduced connection distance
 
     const getColor = () => {
       return "#dc2626" // Red in both themes
@@ -89,7 +89,7 @@ export function ParticleBackground() {
         // Draw particle with adjusted opacity for light mode
         ctx.beginPath()
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
-        ctx.fillStyle = particle.color + (theme === "dark" ? "40" : "20") // Lower opacity in light mode
+        ctx.fillStyle = particle.color + (theme === "dark" ? "25" : "12") // Reduced opacity
         ctx.fill()
       })
 
@@ -104,8 +104,8 @@ export function ParticleBackground() {
             // Calculate opacity based on distance (closer = more opaque)
             const opacity = 1 - distance / connectionDistance
 
-            // Adjust opacity for light mode
-            const opacityValue = theme === "dark" ? Math.floor(opacity * 40) : Math.floor(opacity * 20)
+            // Reduced opacity for subtlety
+            const opacityValue = theme === "dark" ? Math.floor(opacity * 20) : Math.floor(opacity * 10)
 
             ctx.beginPath()
             ctx.strokeStyle = `${particles[i].color}${opacityValue.toString(16).padStart(2, "0")}`

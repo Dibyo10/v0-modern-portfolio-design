@@ -4,15 +4,55 @@ import { useInView } from "react-intersection-observer"
 import { motion } from "framer-motion"
 import { TerminalAnimation } from "@/components/terminal-animation"
 
-const skills = [
-  { name: "HTML/CSS", level: 90 },
-  { name: "JavaScript", level: 85 },
-  { name: "React.js", level: 80 },
-  { name: "FastAPI", level: 75 },
-  { name: "PostgreSQL", level: 70 },
-  { name: "Data Structures", level: 80 },
-  { name: "Algorithms", level: 75 },
-  { name: "AI Tools Knowledge", level: 75 },
+const skillCategories = [
+  {
+    name: "Go",
+    capabilities: [
+      "Concurrency-safe HTTP servers",
+      "Rate limiters from scratch",
+      "Mutexes, RWLocks, worker patterns",
+    ],
+  },
+  {
+    name: "Python",
+    capabilities: [
+      "FastAPI backend services",
+      "Agentic workflow orchestration",
+      "Data processing & validation",
+    ],
+  },
+  {
+    name: "TypeScript",
+    capabilities: [
+      "Production LLM system backends",
+      "Type-safe API clients",
+      "Streaming response handlers",
+    ],
+  },
+  {
+    name: "LLM Engineering",
+    capabilities: [
+      "Multi-provider tool calling (Anthropic, OpenAI)",
+      "RAG pipelines with reranking",
+      "Prompt caching for 70%+ cache hits",
+    ],
+  },
+  {
+    name: "Backend Systems",
+    capabilities: [
+      "Sliding window rate limiting with Lua",
+      "Async job queues & summarization",
+      "Multi-stage orchestration pipelines",
+    ],
+  },
+  {
+    name: "Databases",
+    capabilities: [
+      "Redis caching with Lua scripts",
+      "MongoDB with repository patterns",
+      "Pinecone vector store integration",
+    ],
+  },
 ]
 
 export default function Skills() {
@@ -45,10 +85,10 @@ export default function Skills() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Skills</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
           <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
-            Here are the technologies and skills I've acquired throughout my journey as a developer.
+            What I've built with, not self-assessed percentages.
           </p>
         </motion.div>
 
@@ -58,50 +98,25 @@ export default function Skills() {
               variants={containerVariants}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
-              className="grid grid-cols-1 md:grid-cols-2 gap-8"
+              className="grid grid-cols-1 md:grid-cols-2 gap-6"
             >
-              {skills.map((skill, index) => (
+              {skillCategories.map((skill) => (
                 <motion.div
                   key={skill.name}
                   variants={itemVariants}
                   transition={{ duration: 0.5 }}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ scale: 1.02 }}
                   className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 hover:shadow-xl transition-all duration-300"
                 >
-                  <div className="flex justify-between mb-2">
-                    <span className="font-medium">{skill.name}</span>
-                    <span className="text-primary font-bold">{skill.level}%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={inView ? { width: `${skill.level}%` } : { width: 0 }}
-                      transition={{ duration: 1, delay: index * 0.1 }}
-                      className="relative h-2.5"
-                    >
-                      {/* Animated gradient background */}
-                      <div
-                        className="absolute inset-0 bg-gradient-to-r from-primary to-red-800 h-2.5 rounded-full"
-                        style={{
-                          backgroundSize: "200% 100%",
-                          animation: "gradientMove 2s linear infinite",
-                        }}
-                      />
-
-                      {/* Shine effect */}
-                      <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 h-2.5 rounded-full"
-                        animate={{
-                          x: ["-100%", "100%"],
-                        }}
-                        transition={{
-                          duration: 1.5,
-                          repeat: Number.POSITIVE_INFINITY,
-                          ease: "linear",
-                        }}
-                      />
-                    </motion.div>
-                  </div>
+                  <h3 className="font-bold text-lg text-primary mb-3">{skill.name}</h3>
+                  <ul className="space-y-2">
+                    {skill.capabilities.map((capability, idx) => (
+                      <li key={idx} className="text-gray-600 dark:text-gray-300 text-sm flex items-start">
+                        <span className="text-primary mr-2 mt-1">›</span>
+                        {capability}
+                      </li>
+                    ))}
+                  </ul>
                 </motion.div>
               ))}
             </motion.div>
@@ -118,39 +133,7 @@ export default function Skills() {
             </div>
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: 0.8 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
-        >
-          {["Frontend", "Backend", "Data Structures", "Algorithms"].map((category, index) => (
-            <motion.div
-              key={category}
-              whileHover={{ y: -10, scale: 1.05 }}
-              className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-6 flex flex-col items-center hover:shadow-xl transition-all duration-300"
-            >
-              <div className="text-4xl font-bold text-primary mb-2 transition-transform">
-                {["90%", "80%", "85%", "75%"][index]}
-              </div>
-              <div className="text-gray-600 dark:text-gray-300">{category}</div>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
-
-      {/* Add a custom style for the gradient animation */}
-      <style jsx global>{`
-        @keyframes gradientMove {
-          0% {
-            background-position: 0% 0%;
-          }
-          100% {
-            background-position: 100% 0%;
-          }
-        }
-      `}</style>
     </section>
   )
 }

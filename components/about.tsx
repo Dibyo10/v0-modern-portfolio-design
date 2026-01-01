@@ -33,8 +33,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
           <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
-            I'm a 19-year-old Computer Science major with a passion for building innovative web applications and solving
-            complex problems.
+            Systems-first AI & backend engineer who builds production-grade LLM-powered systems by reasoning from first principles and shipping working software.
           </p>
         </motion.div>
 
@@ -53,14 +52,12 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col justify-center"
           >
-            <h3 className="text-2xl font-bold mb-4">My Journey</h3>
+            <h3 className="text-2xl font-bold mb-4">What I Do</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              At 19, I started my coding journey with a curiosity about how websites work. That curiosity evolved into a
-              passion for creating elegant solutions to complex problems.
+              I build LLM-powered systems, backend infrastructure, and tools that prioritize correctness over convenience.
             </p>
             <p className="text-gray-600 dark:text-gray-300">
-              Today, I specialize in full-stack development with a focus on modern frameworks and AI integration. I'm
-              constantly learning new technologies and techniques to improve my craft.
+              CS undergrad. Long-term goal: reliable AI systems at scale — systems that fail predictably and recover gracefully.
             </p>
           </motion.div>
         </div>
@@ -80,8 +77,7 @@ export default function About() {
               <h3 className="text-xl font-semibold">Technical Skills</h3>
             </div>
             <p className="text-gray-600 dark:text-gray-300">
-              Proficient in HTML, CSS, JavaScript, React.js, FastAPI, and PostgreSQL. Currently expanding my knowledge
-              in AI tools and machine learning.
+              Go, Python, TypeScript for backend systems. LLM engineering including multi-provider tool calling, RAG with reranking, prompt caching, and conversation summarization. Redis, MongoDB, Pinecone.
             </p>
           </motion.div>
 
@@ -96,11 +92,13 @@ export default function About() {
               <div className="bg-primary/10 p-3 rounded-full mr-4">
                 <GraduationCap className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold">Education</h3>
+              <h3 className="text-xl font-semibold">Engineering Philosophy</h3>
             </div>
             <p className="text-gray-600 dark:text-gray-300">
-              Computer Science major with a focus on web development and data structures & algorithms. Continuously
-              learning through projects and online resources.
+              Design before code. AI as an assistant, never the decision-maker. Build tools that fail loudly.
+            </p>
+            <p className="text-gray-500 dark:text-gray-400 text-sm mt-2 italic">
+              Example: All LLM-generated outputs are validated against schema constraints before execution.
             </p>
           </motion.div>
 
@@ -115,11 +113,10 @@ export default function About() {
               <div className="bg-primary/10 p-3 rounded-full mr-4">
                 <Briefcase className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold">Current Project</h3>
+              <h3 className="text-xl font-semibold">Current Focus</h3>
             </div>
             <p className="text-gray-600 dark:text-gray-300">
-              Working on Moodify, a sentiment analysis application. Currently developing the backend infrastructure
-              using FastAPI, implementing databases, and integrating OpenAI for advanced text analysis.
+              Building production LLM systems with agentic workflows, schema validation, and self-healing execution loops. Backend infrastructure in Go with concurrency-safe patterns.
             </p>
           </motion.div>
         </div>
