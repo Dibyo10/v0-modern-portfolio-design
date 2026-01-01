@@ -13,7 +13,7 @@ const projects = [
     description:
       "Production personal finance chatbot with multi-provider LLM orchestration, tool calling (calculators, charts, web search), RAG with reranking, and conversation summarization. Built from scratch during internship.",
     image: "/images/handauncle_logo.jpeg",
-    tags: ["TypeScript", "Anthropic", "OpenAI", "Redis", "Pinecone", "MongoDB"],
+    tags: ["TypeScript","Hono","Zod","React","Redux","Vercel AI SDK", "Anthropic", "OpenAI", "Redis", "Pinecone", "MongoDB"],
     challenges: ["Multi-provider tool calling orchestration", "Prompt caching for 70%+ cache hits", "Sliding window rate limiting with Lua", "Async conversation summarization"],
     github: null,
     demo: "https://chat.handauncle.com",
@@ -23,8 +23,8 @@ const projects = [
     title: "Rate Limiting from Scratch",
     description:
       "Token Bucket, Sliding Window, and Leaky Bucket algorithms implemented in Go. Part of my System Design learning series on LinkedIn.",
-    image: "/placeholder.svg",
-    tags: ["Go", "Concurrency", "Algorithms", "Backend"],
+    image: "/images/go_rate_limit.jpg",
+    tags: ["Go","System Design", "Concurrency", "Algorithms", "Backend"],
     challenges: ["Concurrency correctness", "Lazy time computation", "Algorithmic invariants"],
     github: "https://github.com/Dibyo10/System_Design_Learnings/tree/main/Rate_Limiting",
     demo: null,
@@ -34,8 +34,8 @@ const projects = [
     title: "LLM Quality Monitoring System",
     description:
       "Internal monitoring pipeline analyzing 10k+ messages for negative sentiment, calculation errors, tool misuse, and user frustration. RoBERTa sentiment + embedding-based clustering for actionable failure categorization.",
-    image: "/placeholder.svg",
-    tags: ["Python", "RoBERTa", "MongoDB", "Flask", "Embeddings"],
+    image: "/images/llm_monitoring_system.jpg",
+    tags: ["Python", "RoBERTa", "MongoDB", "Flask", "Embeddings", "Clustering", "Unsupervised ML"],
     challenges: ["Cached inference for low-latency sentiment at scale", "Centroid + exemplar similarity clustering", "N+1 query elimination with batch/index optimization"],
     github: null,
     demo: null,
