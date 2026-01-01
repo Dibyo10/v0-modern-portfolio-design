@@ -33,7 +33,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
           <p className="max-w-2xl mx-auto text-gray-300">
-            Systems-first AI & backend engineer who builds production-grade LLM-powered systems by reasoning from first principles and shipping working software.
+            Systems-first AI & backend engineer who builds production-grade AI-powered systems by reasoning from first principles and shipping working software.
           </p>
         </motion.div>
 
